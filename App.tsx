@@ -1,6 +1,7 @@
 import * as React from 'react';
 import Modal from './Modal';
 import FilterList from './filterList';
+import { UserData } from './data/userData';
 import './style.css';
 
 const App: React.FC = () => {
@@ -9,7 +10,7 @@ const App: React.FC = () => {
     <div>
       {/* {showModal && <Modal {...{ showModal, setShowModal }} />}
       <button onClick={() => setShowModal(!showModal)}>button</button> */}
-      <FilterList />
+      <FilterList {...{ UserData }} />
     </div>
   );
 };
