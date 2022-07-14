@@ -25,9 +25,10 @@ const FilterList: FC<Idata> = ({ UserData }) => {
   useEffect(() => {
     const tempData = [...UserData];
     const filteredData = tempData.filter((item) => {
-      return (item?.email || item?.last_name || item?.gender)
-        .toLowerCase()
-        .includes(searchTerm.toLowerCase());
+      return (
+        (item?.gender).toLowerCase().includes(searchTerm.toLowerCase()) ||
+        (item?.email).toLowerCase().includes(searchTerm.toLowerCase())
+      );
     });
     setData(filteredData);
   }, [searchTerm]);
