@@ -7,18 +7,18 @@ const StopWatch = () => {
     const getTime = () => {
       setDate(new Date().toLocaleTimeString());
     };
-    const inte = setInterval(() => {
+    const intervel = setInterval(() => {
       getTime();
     }, 1000);
-    return () => clearInterval(inte);
-  });
+    return () => clearInterval(intervel);
+  }, []);
   console.log(date);
   return (
     <div style={{ textAlign: 'center' }}>
       <h4>{date} </h4>
-      {/* <h1>Stop watch </h1>
+      <h1>Stop watch </h1>
       <p>hh:mm:ss </p>
-      <button>Start</button> */}
+      <button>Start</button>
     </div>
   );
 };
