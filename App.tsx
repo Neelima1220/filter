@@ -1,6 +1,6 @@
 import * as React from 'react';
-import Modal from './Modal';
-import FilterList from './filterList';
+import Modal from './components/Modal';
+import FilterList from './components/filterList';
 import { UserData } from './data/userData';
 import './style.css';
 

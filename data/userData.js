@@ -140,3 +140,5 @@ export const UserData = [
     gender: 'Female',
   },
 ];
+
+export const TabsData = [];
