@@ -146,27 +146,33 @@ export const TabsData = [
     id: 1,
     title: 'Staff Accountant I',
     description: 'Extirpation of Matter from Left Hip Joint, Open Approach',
+    color: 'yellow',
   },
   {
     id: 2,
     title: 'Help Desk Technician',
     description: 'Reattachment of Left Foot Muscle, Open Approach',
+    color: 'red',
   },
   {
     id: 3,
     title: 'Community Outreach Specialist',
     description:
       'Reposition Left Metacarpophalangeal Joint, Percutaneous Endoscopic Approach',
+    color: 'blue',
   },
   {
     id: 4,
     title: 'Senior Quality Engineer',
     description:
       'Removal of Nonautologous Tissue Substitute from Right Toe Phalangeal Joint, Percutaneous Endoscopic Approach',
+    color: 'gray',
   },
+
   {
     id: 5,
     title: 'Account Representative IV',
     description: 'Resection of Left Lower Lung Lobe, Open Approach',
+    color: 'pink',
   },
 ];

@@ -4,3 +4,11 @@ p {
 }
 
 /* Tabs component */
+.tab-title-container {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.tab-desc-container {
+  padding: 2rem;
+}
