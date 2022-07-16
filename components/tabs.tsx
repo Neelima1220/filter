@@ -16,6 +16,7 @@ const Tabs = () => {
               style={{
                 padding: '1rem',
                 margin: '-1px',
+                cursor: index === current ? 'pointer' : '',
                 border:
                   index === current
                     ? `1px solid ${data[current].color}`
@@ -32,7 +33,7 @@ const Tabs = () => {
       </div>
       <div
         className="tab-desc-container"
-        style={{ backgroundColor: `${data[current].color}` }}
+        style={{ backgroundColor: `${data[current].color}`, width: '100%' }}
       >
         <div className="tab-desc">{data[current].description}</div>
       </div>
