@@ -35,7 +35,10 @@ const Tabs = () => {
         className="tab-desc-container"
         style={{ backgroundColor: `${data[current].color}`, width: '100%' }}
       >
-        <div className="tab-desc">{data[current].description}</div>
+        <div className="tab-desc">
+          <h2>{data[current].title}</h2>
+          <p>{data[current].description}</p>
+        </div>
       </div>
     </div>
   );
