@@ -14,9 +14,10 @@ const Tabs = () => {
               className="tab-title"
               onClick={() => setCurrent(index)}
               style={{
+                width: '20%',
                 padding: '1rem',
                 margin: '-1px',
-                cursor: index === current ? 'pointer' : '',
+                cursor: index === current ? '' : 'pointer',
                 border:
                   index === current
                     ? `1px solid ${data[current].color}`
@@ -33,7 +34,7 @@ const Tabs = () => {
       </div>
       <div
         className="tab-desc-container"
-        style={{ backgroundColor: `${data[current].color}`, width: '100%' }}
+        style={{ backgroundColor: `${data[current].color}` }}
       >
         <div className="tab-desc">
           <h2>{data[current].title}</h2>
