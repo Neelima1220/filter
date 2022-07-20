@@ -27,7 +27,7 @@ const FilterList: FC<Idata> = ({ UserData }) => {
     const dataKeys = ['first_name', 'last_name', 'email', 'gender'];
     const filteredData = tempData.filter((item) => {
       return dataKeys.some((key) =>
-        item[key].toLowerCase().includes(searchTerm.toLowerCase())
+        item[key].toLowerCase().includes(searchTerm.toLowerCase().trim())
       );
     });
     setData(filteredData);
