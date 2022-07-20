@@ -58,28 +58,32 @@ const FilterList: FC<Idata> = ({ UserData }) => {
           flexDirection: 'column',
         }}
       >
-        <table>
-          <thead>
-            <tr style={{ textAlign: 'left' }}>
-              <th> email</th>
-              <th> first name</th>
-              <th> last name</th>
-              <th> gender</th>
-            </tr>
-          </thead>
-          <tbody>
-            {data.map((item: IUserData, key: number) => {
-              return (
-                <tr key={key}>
-                  <td> {item?.first_name}</td>
-                  <td> {item?.last_name}</td>
-                  <td> {item?.email}</td>
-                  <td> {item?.gender}</td>
-                </tr>
-              );
-            })}
-          </tbody>
-        </table>
+        {data.length > 0 ? (
+          <table>
+            <thead>
+              <tr style={{ textAlign: 'left' }}>
+                <th> email</th>
+                <th> first name</th>
+                <th> last name</th>
+                <th> gender</th>
+              </tr>
+            </thead>
+            <tbody>
+              {data.map((item: IUserData, key: number) => {
+                return (
+                  <tr key={key}>
+                    <td> {item?.first_name}</td>
+                    <td> {item?.last_name}</td>
+                    <td> {item?.email}</td>
+                    <td> {item?.gender}</td>
+                  </tr>
+                );
+              })}
+            </tbody>
+          </table>
+        ) : (
+          'No data available'
+        )}
       </div>
     </div>
   );
