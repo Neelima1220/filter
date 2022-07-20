@@ -24,10 +24,10 @@ const FilterList: FC<Idata> = ({ UserData }) => {
 
   useEffect(() => {
     const tempData = [...UserData];
+    const dataKeys = ['first_name', 'last_name', 'email', 'gender'];
     const filteredData = tempData.filter((item) => {
-      return (
-        (item?.gender).toLowerCase().includes(searchTerm.toLowerCase()) ||
-        (item?.email).toLowerCase().includes(searchTerm.toLowerCase())
+      return dataKeys.some((key) =>
+        item[key].toLowerCase().includes(searchTerm.toLowerCase())
       );
     });
     setData(filteredData);
@@ -70,7 +70,7 @@ const FilterList: FC<Idata> = ({ UserData }) => {
           <tbody>
             {data.map((item: IUserData, key: number) => {
               return (
-                <tr>
+                <tr key={key}>
                   <td> {item?.first_name}</td>
                   <td> {item?.last_name}</td>
                   <td> {item?.email}</td>

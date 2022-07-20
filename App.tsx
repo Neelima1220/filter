@@ -12,9 +12,9 @@ const App: React.FC = () => {
     <div>
       {/* {showModal && <Modal {...{ showModal, setShowModal }} />}
       <button onClick={() => setShowModal(!showModal)}>button</button> */}
-      {/* <FilterList {...{ UserData }} /> */}
+      <FilterList {...{ UserData }} />
       {/* <StopWatch /> */}
-      <Tabs />
+      {/* <Tabs /> */}
     </div>
   );
 };
